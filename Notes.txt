@@ -1,0 +1,17 @@
+*ngIf="animal"
+
+
+
+export class DialogDataExampleDialog {
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
+
+}
+
+
+https://material.angular.io/components/dialog/overview
+
+
+
+
+[class.dark-theme]="isDarkTheme"

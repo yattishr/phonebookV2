@@ -1,0 +1,31 @@
+<h4>Phonebook | Contacts</h4>
+<!--mat-card class="contact-card" *ngFor="let contact of contacts">
+  <h4>{{contact.name}}
+  <button mat-icon-button (click)="delete(contact)">
+    <mat-icon>delete</mat-icon>
+  </button>  
+  </h4>
+</mat-card-->
+
+
+<mat-list>
+  <a mat-list-item *ngFor="let contact of contacts">
+    <h3 matLine> {{contact.name}} </h3>
+    <p matLine>
+      <span> {{contact.number}} </span>
+    </p>
+    <button mat-icon-button (click)="delete(contact)">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <button mat-icon-button (click)="edit(contact)">
+      <mat-icon>edit</mat-icon>
+    </button>    
+  </a>
+</mat-list>
+
+<button mat-mini-fab class="add-contact-fab" (click)="add()">
+  <mat-icon>add</mat-icon>
+</button>
+<button mat-mini-fab class="info-contact-fab" (click)="add()">
+  <mat-icon>home</mat-icon>
+</button>

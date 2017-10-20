@@ -1,0 +1,25 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #menu>
+	<mat-nav-list>
+        <a mat-list-item routerLink="/popular" (click)="menu.close()">
+        Popular</a>
+        <a mat-list-item routerLink="/contacts" (click)="menu.close()">
+        Contatcs</a>        
+    </mat-nav-list>
+    <hr>
+    <button mat-button (click)="menu.close()">CLOSE</button>
+  </mat-sidenav>
+  <mat-toolbar color="primary">
+        <button mat-icon-button (click)="menu.open()">
+            <mat-icon>menu</mat-icon>
+            {{title}}
+        </button>
+        <span class="example-spacer"></span>
+        <button mat-icon-button (click)="isDarkTheme = !isDarkTheme">
+          Toggle Theme
+        </button>
+  </mat-toolbar>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>
